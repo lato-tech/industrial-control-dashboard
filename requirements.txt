@@ -1,2 +1,11 @@
+# Industrial Control Panel Dashboard - Raspberry Pi 5 Production
+# Minimal dependencies for production deployment
+
+# Web Framework
 Flask==2.3.3
-pymodbus==3.5.4 
+
+# Modbus Communication
+pymodbus==3.5.4
+
+# Raspberry Pi PLC Hardware  add extra steps to how to share this py file
+librpiplc

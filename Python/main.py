@@ -9,7 +9,7 @@ from datetime import datetime
 
 debugB = False
 if not debugB:
-    from librpiplc import rpiplc
+    import librpiplc as rpiplc
 
 
 from flask import render_template, Response

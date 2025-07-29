@@ -1,0 +1,96 @@
+.sidebar_BatchList{
+	display: none;
+}
+
+.topbar-batchList {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #bd317c;
+	color: white;
+	padding: .75vw;
+	font-family: 'Montserrat-Bold';
+}
+
+.topbar-batchList h1 {
+	margin: 0;
+}
+
+.date-period {
+	display: flex;
+	gap: .75vw;
+	align-items: center;
+}
+
+.topbar-batchList select {           /* Adjust width as needed */
+    padding: .6vw;
+    font-size: 1vw;
+    color: #555;            /* Text color */
+    border: .075vw solid #ddd; /* Default border color */
+    border-radius: .6vw;     /* Rounded corners */
+    outline: none;
+    transition: border-color 0.3s;
+	font-family: 'Montserrat-Bold';
+}
+
+.topbar-batchList select:focus {
+	border-color: #4CAF50; 
+}	
+
+.date-period input {
+    width: 11.25vw;           /* Adjust width as needed */
+    padding: .6vw;
+    font-size: 1vw;
+    color: #555;            /* Text color */
+    border: .075vw solid #ddd; /* Default border color */
+    border-radius: .6vw;     /* Rounded corners */
+    outline: none;
+	height:3vw;
+    transition: border-color 0.3s;
+}
+
+/* Focus state for better user experience */
+.date-period input:focus {
+    border-color: #4CAF50; /* Border color when focused */
+	
+}
+
+/* Placeholder styling */
+.date-period input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+
+.tSideBar {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: .075vw solid #ddd;
+}
+
+th, td {
+	padding: .6vw;
+	text-align: center;
+	font-size: 1.2vw;
+}
+
+th {
+	background-color: #10b5b2;
+}
+
+.tSideBar tr:nth-child(even) {
+    background-color: #70d4bb;; /* Color for even rows */
+}
+
+/* Odd rows */
+.tSideBar tr:nth-child(odd) {
+    background-color: #99f7e0; /* Color for odd rows */
+}
+
+.tSideBar tr:hover{
+	
+	background-color: #99a7e0; 
+}

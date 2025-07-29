@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype'); /* Adjust the path to your font file */
+  font-weight: normal; /* Adjust based on the font weight */
+  font-style: normal; /* Adjust if it's italic */
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype'); /* Adjust the path to your font file */
+  font-weight: normal; /* Adjust based on the font weight */
+  font-style: normal; /* Adjust if it's italic */
+}
+
+body {
+    font-family: 'Montserrat-Regular';
+    background-color: #161d30
+}
+/*.weather-info span, 
+.weather-info img {
+    margin-right: 10px;
+}*/
+
+
+
+
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+select {
+    font-size: 1.2vw;
+	padding:0;/* Adjust font size as needed */
+}
+
+.container {
+    display: flex;
+    height: 100%; /* Occupy full height below the top bar */
+    flex-grow: 1; /* Allows it to take the full available height */
+    position: relative;
+}
+
+
+.main-content {
+    margin-left: .75vw;
+    padding: 1.5vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2vw;
+}
+
+
+
+span {
+    font-size: 1.2vw;/*16px*/
+}
+
+
+.temperature {
+    margin-top: .75vw;
+}
+
+.temp-value {
+}
+

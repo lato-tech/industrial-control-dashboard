@@ -1,0 +1,87 @@
+<div class="panel" id="panel-{{ panel[0] }}">				
+	<div class="top-bar2">
+		<div class="MainHeadingCont">
+			<!-- Circular Indicator -->
+			<span class="indicator"></span>
+
+			<!-- Heading -->
+			<span class="heading">{{ panel[1] }}</span>
+
+			<!-- Fault Alarm Logo -->
+			<div class="Logo">
+				<span class="heading2" style="margin-left: .375vw;"></span>
+				<img src="static/logos/faultA/fault.png" alt="Fault Alarm" style="display: none;"  class="fault-alarm">
+			</div>
+			{% if panel[0] !=3 %}
+			<!-- Cycle Label -->
+			<span id="cycle-{{ panel[0] }}" class="cycle-label" onclick="togglePopup({{ panel[0] }})">{{ panel[2] }}</span>
+			{% else %}
+			<div class = "connButton"  > 
+				<img src="static/logos/Contectors/onConn.png"  class="Contectors">
+				<img src="static/logos/Contectors/offConn.png"  class="Contectors" style = "margin-left:.375vw; margin-right:.375vw;" >
+				<img src="static/logos/Contectors/offConn.png"  class="Contectors">
+			</div>
+			{% endif %}
+			
+		</div>
+		<!-- Toggle Button -->
+		<label class="switch">
+			<input type="checkbox" onchange="toggleIndicator(this, {{ panel[0] }})">
+			<span class="slider round"></span>
+		</label>
+	</div>
+
+
+
+	<!-- Main Area -->
+	{% if panel[0] != 12 %}
+	<div class="main-content2">
+		<!-- Frequency Section -->
+		<div class="frequency-container">
+			<div class="label">Frequency:</div>
+			<div class="sv-pv">
+				<span style="margin-right: .45vw; "> SV:</span>
+				<div class="input-container">
+					<span id = "friq{{ panel[0] }}"  class="inLabel"  onclick="toggleInput(this)">--</span>
+					<input type="number" class="inText" value="" style="display: none;" onblur="updateValue(this, 'friq', {{panel[0]}})" />
+					<span>Hz</span>
+				</div>
+				<span id="pvFriq" class = "PVs" style="margin-right: .45vw;">PV: {{ panel[3] }} Hz</span>
+			</div>
+		</div>
+
+		<!-- RTD Temperature Section -->
+		{% if panel[0] not in [9] %}
+		<div class="frequency-container"  style="margin-top: 1.875vw;">
+			<div class="label">RTD Temperature:</div>
+			<div class="sv-pv">
+				<span style="margin-right: .45vw; "> SV:</span>
+				<div class="input-container">
+					<span id = "Temp{{ panel[0] }}" class="inLabel"  onclick="toggleInput(this)">--</span>
+					<input type="number" class="inText" value="" style="display: none;" onblur="updateValue(this, 'temp', {{panel[0]}})" />
+					<span>°C</span>
+				</div>
+				<span id="pvTemp" class = "PVs" style="margin-right: .45vw;">PV: {{ panel[4] }} °C</span>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+	
+	{% else %}
+	<div class="main-content2">
+		<!-- Frequency Section -->
+		<div class="frequency-container">
+			<div id = "Vav" class="label">V: 	 -- V</div>
+			<div id = "Iav" class="label">I: 	 -- A</div>
+			<div id = "FriqL" class="label">F: 	 -- Hz</div>
+		</div>
+
+		<!-- RTD Temperature Section -->
+		<div class="frequency-container"  style="margin-top: 1.875vw;">
+			<div id = "Ener" class="label">E: 	 -- kWh</div>
+			<div id = "Powe" class="label">P: 	 -- kW</div>
+			<div  id = "PowFec"class="label">PF: 	 --</div>
+		</div>
+	</div>
+	{% endif %}
+</div>

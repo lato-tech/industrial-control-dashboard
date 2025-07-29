@@ -1,0 +1,62 @@
+<div class="popup" onclick="event.stopPropagation()">
+    <!-- Popup Top Bar -->
+    <div class="top-bar popup-bar" style="background-color: #3498db; color: white; padding: 15px; border-radius: 10px 10px 0 0; ">
+        <div style="display: flex; justify-content: space-between; align-items: center; white-space: nowrap; gap: 20px; padding: 10px;"" >
+            <!-- Batch No -->
+            <span>Batch #224</span>
+
+            <!-- Vessel Name -->
+            <span>6kL Vessel 1</span>
+
+            <!-- Total Time -->
+            <span>Total Time: 14:30:12</span>
+
+            <!-- Cycle Dropdown -->
+            <select style="padding: 8px; border-radius: 10px; border: none; background-color: #fff; color: #3498db;">
+                <option value="Cycle1">Cycle 1</option>
+                <option value="Cycle2">Cycle 2</option>
+                <option value="Cycle3">Cycle 3</option>
+                <option value="Cycle4">Cycle 4</option>
+                <option value="Cycle5">Cycle 5</option>
+                <option value="Cycle6">Cycle 6</option>
+            </select>
+
+            <!-- Toggle Button -->
+            <label class="switch">
+                <input type="checkbox" onchange="togglePopupSwitch(this)">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Popup Main Content Area -->
+    <div class="popup-content" style="padding: 20px; background-color: #f4f4f4; border-radius: 0 0 10px 10px;">
+        <div class="grid-container">
+			<div class="popup-grid-cell">
+				<button class="toggle-btn" onclick="toggleButtonState(this)">Loading</button>
+				<span class="cycle-text">00:15:35</span>
+			</div>
+			<div class="popup-grid-cell">
+				<button class="toggle-btn" onclick="toggleButtonState(this)">Water In</button>
+				<span class="cycle-text">00:25:12</span>
+			</div>
+			<div class="popup-grid-cell">
+				<button class="toggle-btn" onclick="toggleButtonState(this)">Wash</button>
+				<span class="cycle-text">06:00:00</span>
+			</div>
+			<div class="popup-grid-cell">
+				<button class="toggle-btn" onclick="toggleButtonState(this)">Chemical In</button>
+				<span class="cycle-text">00:10:17</span>
+			</div>
+			<div class="popup-grid-cell">
+				<button class="toggle-btn" onclick="toggleButtonState(this)">Water Out</button>
+				<span class="cycle-text">00:15:35</span>
+			</div>
+			<div class="popup-grid-cell">
+				<button class="toggle-btn" onclick="toggleButtonState(this)">Unloading</button>
+				<span class="cycle-text">00:22:21</span>
+			</div>
+            <!-- Toggle Buttons for each option -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,143 @@
+<div style = "z-index: 20;" onclick="event.stopPropagation()">	
+	<div class="topLogos" >
+		<img onclick="togglePopup(undefined, 'LoadPre', true)" src="static/logos/nextPre/prev.png" alt="PrevButton" class="start_stopLogo">
+		<img onclick="togglePopup(undefined, 'LoadNext', true)" src="static/logos/nextPre/next.png" alt="PrevButton" class="start_stopLogo">
+	</div>
+
+	<div class="popup" >
+		<!-- Top Bar -->
+		<div class="popup-bar">
+			<span id = "BatchName">Batch # 343</span>
+			<span id = "startTime">Date: 22:10:2024</span>
+			<span id = "vName">Vessel 1</span>
+			<span id = "TotalTime">Total Batch Time: -</span>
+		</div>		
+		<table id = "batchT" style="width: 100%; border-collapse: collapse; text-align: center; border-radius: 0 0 1.125vw 1.125vw;" >
+			<!-- Column Headings -->
+			<thead id="HeadingAll" class="cyclesAll" style="display: none;">
+				<tr style="background-color: #10b5b2; color: white;">
+					<th style="padding: .75vw; ">Cycle</th>
+					<th style="padding: .75vw; " >Event</th>
+					<th style="padding: .75vw; ">Start Time</th>
+					<th style="padding: .75vw; ">Stop Time</th>
+					<th style="padding: .75vw; ">Duration</th>
+					<th style="padding: .75vw; ">Quantity</th>
+					<th style="padding: .75vw; ">Remarks</th>
+					<th style="padding: .75vw; ">User</th>
+				</tr>
+			</thead>
+			<thead id="Heading12k" class="cyclesAll" style="display: none;">
+				<tr style="background-color: #10b5b2; color: white;">
+					<th style="padding: .75vw; ">From-To</th>
+					<th style="padding: .75vw; " >Transfer</th>
+					<th style="padding: .75vw; ">Start Time</th>
+					<th style="padding: .75vw; ">Stop Time</th>
+					<th style="padding: .75vw; ">Duration</th>
+					<th style="padding: .75vw; ">Quantity</th>
+					<th style="padding: .75vw; ">Remarks</th>
+					<th style="padding: .75vw; ">User</th>
+				</tr>
+			</thead>
+			<!-- Table Rows -->
+			<tbody id="cycleAll" class="cyclesAll" style="display: none;">
+				{% include 'Cycle1.html'%}
+				{% for id in range(2, 6) %}
+					{% set cycle_id = id %}
+					{% include 'Cycle2-5.html' %}
+				{% endfor %}
+				{% include 'Cycle6.html'%}
+					
+				<!-- Repeat for Cycle 3 to Cycle 6 similarly -->
+				<tr style="color: white; font-family: 'Montserrat-Bold'; background-color: #10b5b2;">
+					<td style="padding: .75vw;" colspan="2" >Total Process Time</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;" colspan="3"></td>
+				</tr>
+			</tbody>
+			<tbody id="cycle8k" class="cyclesAll" style="display: none;" >				
+				{% set cycle_id = "" %}
+				{% include 'Cycle2-5A.html' %}
+				<!-- Repeat for Cycle 3 to Cycle 6 similarly -->
+				<tr style="color: white; font-family: 'Montserrat-Bold'; background-color: #10b5b2;">
+					<td style="padding: .75vw;" colspan="2" >Total Process Time</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;" colspan="3"></td>
+				</tr>
+			</tbody>
+			<tbody id="cycle12k" class="cyclesAll" style="display: none;" >				
+				{% for i in range(1, 11) %}
+				<tr style="background-color: #99f7e0;">
+				  <td style="background-color: #aabee6;">
+					 <select>
+						<option value="0" selected>Select</option>
+						<option value="1">6k Vessel 1</option>
+						<option value="2">6k Vessel 2</option>
+						<option value="3">6k Vessel 3</option>
+						<option value="4">6k Vessel 4</option>
+						<option value="5">8k Vessel 1</option>
+						<option value="6">8k Vessel 2</option>
+						<option value="7">12k Vessel 1</option>
+						<option value="8">12k Vessel 2</option>
+						<option value="9">Oven</option>
+						<option value="10">Blender</option>
+						<option value="11">Grinder</option>
+					</select>
+					<select>
+						<option value="0" selected>Select</option>
+						<option value="1">6k Vessel 1</option>
+						<option value="2">6k Vessel 2</option>
+						<option value="3">6k Vessel 3</option>
+						<option value="4">6k Vessel 4</option>
+						<option value="5">8k Vessel 1</option>
+						<option value="6">8k Vessel 2</option>
+						<option value="7">12k Vessel 1</option>
+						<option value="8">12k Vessel 2</option>
+						<option value="9">Oven</option>
+						<option value="10">Blender</option>
+						<option value="11">Grinder</option>
+					</select>
+				  </td>
+				  <td>T{{ i }}</td>
+				  <td>-</td>
+				  <td>-</td>
+				  <td>-</td>
+				  <td></td>
+				  <td>Fresh</td>
+				  <td></td>
+				</tr>
+				{% endfor %}
+				<!-- Repeat for Cycle 3 to Cycle 6 similarly -->
+				<tr style="color: white; font-family: 'Montserrat-Bold'; background-color: #10b5b2;">
+					<td style="padding: .75vw;" colspan="2" >Total Process Time</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;">-</td>
+					<td style="padding: .75vw;" colspan="3"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id = "funishBt" onclick="openConfirmation()" style="padding: .75vw; margin-top:.75vw; background-color: #218a38; border-radius: .375vw; float: right; width:auto; color: white; font-family: 'Montserrat-Bold'; cursor: pointer; font-size: 1.05vw; display: none;">
+		Finish
+	</div>
+	<div id = "DwnBt" onclick="downloadTableAsCSV()" style="padding: .75vw; margin-top:.75vw; background-color: #218a38; border-radius: .375vw; float: right; width:auto; color: white; font-family: 'Montserrat-Bold'; cursor: pointer; font-size: 1.05vw; display: none;">
+		Download
+	</div>
+	<div id = "DwnBt" onclick="SaveBatch2Ex()" style="padding: .75vw; margin-top:.75vw; background-color: #218a38; border-radius: .375vw; float: right; width:auto; color: white; font-family: 'Montserrat-Bold'; cursor: pointer; font-size: 1.05vw; display: none;">
+		OK
+	</div>
+</div>
+<div id="popup2" class="popup-container2" onclick="event.stopPropagation()">
+	<div class = "popUpUp" >
+		<div class = "topBarPopUp"> Are you sure? </div>
+		<div id = "warnMsg" class = "warningMsg"> Confirm to finish Batch # 343 </div>
+		<div class = "button-container" > 
+			<span onclick="yesButton()" class = "button1">Yes</span>
+			<span onclick="noButton()" class = "button2">No</span>
+		</div>	
+	</div>
+</div>

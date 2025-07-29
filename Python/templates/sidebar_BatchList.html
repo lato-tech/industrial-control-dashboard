@@ -1,0 +1,72 @@
+<div id = "sidebar_BatchList" class = "sidebar_BatchList" style = "display: none;">
+<div class="topbar-batchList">
+	<h1>Batch List</h1>
+	<select id = "drpDBatchList" class="user-dropdown" onchange="refreshBatchData()">
+		<option value="1" selected>6k Vessel 1</option>
+		<option value="2">6k Vessel 2</option>
+		<option value="3">6k Vessel 3</option>
+		<option value="4">6k Vessel 4</option>
+		<option value="5">8k Vessel 1</option>
+		<option value="6">8k Vessel 2</option>
+		<option value="7">12k Vessel 1</option>
+		<option value="8">12k Vessel 2</option>
+	</select>
+	<div class="date-period">
+		<input type="text" id="from-date" name="from-date" placeholder="From" onfocus="(this.type='date')"
+           onblur="handleBlur(this)">
+		<input type="text" id="to-date" name="to-date" placeholder="To" onfocus="(this.type='date')"
+           onblur="handleBlur(this)">
+	</div>
+</div>
+
+<table class = "tSideBar">
+	<thead>
+		<tr >
+			<th>Batch Name</th>
+			<th>Date</th>
+		</tr>
+	</thead>
+	<tbody id = "tBatchList">
+		<tr>
+			<td>Batch-001</td>
+			<td>2024-01-15</td>
+		</tr>
+		<tr>
+			<td>Batch-002</td>
+			<td>2024-01-16</td>
+		</tr>
+		<tr>
+			<td>Batch-003</td>
+			<td>2024-01-17</td>
+		</tr>
+		<tr>
+			<td>Batch-004</td>
+			<td>2024-01-18</td>
+		</tr>
+		<tr>
+			<td>Batch-005</td>
+			<td>2024-01-19</td>
+		</tr>
+		<tr>
+			<td>Batch-006</td>
+			<td>2024-01-20</td>
+		</tr>
+		<tr>
+			<td>Batch-007</td>
+			<td>2024-01-21</td>
+		</tr>
+		<tr>
+			<td>Batch-008</td>
+			<td>2024-01-22</td>
+		</tr>
+		<tr>
+			<td>Batch-009</td>
+			<td>2024-01-23</td>
+		</tr>
+		<tr>
+			<td>Batch-010</td>
+			<td>2024-01-24</td>
+		</tr>
+	</tbody>
+</table>
+</div>

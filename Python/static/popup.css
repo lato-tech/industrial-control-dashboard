@@ -1,0 +1,208 @@
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+	overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+}
+
+
+.popup {
+	
+	border-radius: .75vw;
+	overflow: hidden;
+	min-width: 52.5vw;
+	box-shadow: 0vw .3vw .75vw rgba(0, 0, 0, 0.1);
+	background-color: white;
+	overflow-y: auto;
+	position: relative;
+	max-height: 37.5vw;
+	background-color: transparent;
+}
+
+.topLogos{
+	cursor: pointer;
+	display: flex; /* Use flexbox for positioning */
+    justify-content: space-between; /* Align elements to both ends */
+    width: 100%; /* Full width of the container */
+    position: relative;
+	background-color: transparent;
+	height: 3vw
+	
+}
+
+.start-stopLogo{
+	background-color: transparent;
+	width: 3vw; /* Adjust the size of the logos */
+    height: 3vw;
+	padding: .75vw;
+	display: inline-block;
+	
+}
+
+.popup-bar {
+	background-color: #bd317c; 
+	color: white; 
+	border-radius: .75vw .75vw 0 0;
+	align-items: center;
+	font-family: 'Montserrat-Bold';
+	gap: 1.5vw;
+	padding: .75vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+ 
+
+.popup-grid-cell {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;    /* Center items horizontally */
+    justify-content: center; /* Space between items */
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: .75vw;
+}
+
+.toggle-btn {
+	font-family: 'Montserrat-Bold';
+	padding: 1.125vw;
+	border: none;
+	border-radius: .6vw;
+	font-size: 1.2vw;
+	cursor: pointer;
+	background-color: red;
+	width: 100%;
+	color: white;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn.active {
+	background-color: green;
+	color: white;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 3.75vw;
+	height: 1.875vw;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+	border-radius: 1.875vw;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 1.425vw;
+	width: 1.425vw;
+	left: .225vw;
+	bottom: .225vw;
+	background-color: white;
+	transition: 0.4s;
+	border-radius: 50%;
+}
+
+input:checked + .slider {
+	background-color: #3498db;
+}
+
+input:checked + .slider:before {
+	transform: translateX(1.8vw);
+}
+
+
+.popup-container2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popUpUp{
+	font-size: 1.2vw;
+	background-color: #badbc2;
+	border-radius: .375vw;
+	padding-bottom: .75vw;
+	
+	
+}
+.button1{
+	cursor: pointer;
+	border-radius:.375vw;
+	padding: .375vw;
+	color: white;	
+	background-color: #349e66;
+}
+.button2{
+	cursor: pointer;
+	border-radius:.375vw;
+	color: white;
+	padding: .375vw;
+	background-color: #f5551b;
+}
+.topBarPopUp{
+	padding: .75vw;
+	text-align: center; 
+	color: white;
+	border-radius: .375vw .375vw 0 0;
+	font-family: 'Montserrat-Bold';
+	background-color: #bd317c;
+}
+
+.warningMsg{
+	padding: .75vw;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Aligns the buttons horizontally in the center */
+    align-items: center; /* Aligns the buttons vertically in the center */
+    gap: 1.5vw;
+
+}
+
+#batchT th, #batchT td {
+	white-space: nowrap; /* Prevent text from wrapping */
+	overflow: hidden; /* Hide overflowing text */
+	text-overflow: ellipsis; /* Show ellipsis for overflow */
+	padding: .75vw; /* Add padding */
+}
+
+#batchT td {
+        padding: .75vw;
+        max-width: 100%; /* Ensure the td doesn’t exceed th width */
+    }

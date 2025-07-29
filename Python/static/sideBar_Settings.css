@@ -1,0 +1,43 @@
+.sidebar_Settings{
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;	  
+}
+.row112 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-bottom: .7vw;
+  padding-top: .7vw;
+  box-sizing: border-box;
+  border-bottom: .075vw solid #ccc; /* Optional for visual separation */
+
+}
+
+.row112:nth-child(odd) {
+  background-color: #8a9c8f; /* Light background for odd rows */
+}
+
+.row112:nth-child(even) {
+  background-color: #eaeaea; /* Slightly darker background for even rows */
+}
+
+/*
+.row112:first-child {
+	  padding-bottom: 5px;
+  padding-top: 5px;
+  justify-content: space-between;
+}*/
+.row112L1, .row112I, .row112B { 
+  margin-left: .7vw;
+  padding: .3vw;
+
+}
+.row112I[type="text"] {
+  
+  width: 11.25vw;
+}

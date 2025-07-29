@@ -1,0 +1,50 @@
+.sidebar {
+    width: 20%;
+    background-color: #444;
+    color: white;
+    height: 100%;
+    position: absolute;
+    left: -20%; /* Hidden initially */
+    transition: left 0.3s;
+	z-index: 10;
+}
+
+.sidebar.active {
+    left: 0; /* Show sidebar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: .075vw;
+}
+
+.sidebar li {
+    padding: .75vw;
+    cursor: pointer;
+	font-size: 1.2vw;
+}
+
+.sidebar li:hover {
+    background-color: #555;
+}
+
+.sidebar li.active {
+    background-color: #555; /* Same color as hover */
+     /* pointer-events: none; Disable clicking when active */
+    color: white;
+}
+
+.sideBarArea{
+	width: 80%;
+    height: 100%;
+    position: absolute;
+	z-index: 200;
+	background-color: white;
+    left: -80%; /* Hidden initially */
+    transition: left 0.3s;
+	border: .15vw solid black;
+	
+}
+.sideBarArea.active {
+    left: 20%; /* Show sidebar */
+}

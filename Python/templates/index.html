@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="static/styles.css">
+	<link rel="stylesheet" href="static/topBar.css">
+	<link rel="stylesheet" href="static/sidebar.css">
+	<link rel="stylesheet" href="static/panel.css">
+	<link rel="stylesheet" href="static/popup.css">
+	<link rel="stylesheet" href="static/sideBar_BatchList.css">
+	<link rel="stylesheet" href="static/sideBar_Settings.css">
+</head>
+<body>
+	<div class="top-bar">
+		<div id="hemBt" class="hamburger">&#9776;</div>
+		
+		<div class="weather-info">
+			<span id="current-time" class="Tx_Bold"></span>
+			<img src="static/logos/weatherAll/whRainy.png" alt="Weather" class="weather-logo">
+			<span id="temperature" class="Tx_Bold">25°C</span>
+			<img src="static/logos/wind/wind.png" alt="Wind" class="wind-logo">
+			<span id="wind-speed" class="Tx_Bold">15 KPH</span>
+			<img src="static/logos/Rain/Rain.png" alt="Rain" class="rain-logo">
+			<span id="rain-info" class="Tx_Bold">3 mm</span>
+		</div>
+		
+		<select id= "userDrop" class="user-dropdown">
+			<option>Select User</option>
+			<option>User 1</option>
+			<option>User 2</option>
+			<option>User 3</option>
+		</select>
+	</div>
+	
+	<div class="container">
+	
+		<div class="sidebar" id="sidebar">
+			<ul>
+				<li onclick="SettingBt(this)">Settings</li>
+				<li onclick="IO_stateBt(this)">IO States</li>
+				<li onclick="batchHisBt(this)">Batch History</li>
+				<li onclick="dataBaseHis(this)">Database</li>
+				<li onclick="Maintenance(this)">Maintenance</li>
+			</ul>
+		</div>
+		<div id="sideBarArea" class="sideBarArea" >
+			{% include 'sidebar_Settings.html' %}
+			{% include 'sidebar_IOstate.html' %}
+			{% include 'sidebar_BatchList.html' %}
+			{% include 'sidebar_Database.html' %}
+			{% include 'sidebar_Maintenance.html' %}
+		</div>
+		
+		<div class="main-content">
+			<div class="grid">
+				{% for panel in panels %}
+					{% include 'panel.html' with context %}
+				{% endfor %}
+			</div>	
+		</div>
+	
+	</div>
+	
+	<div id="popup" class="popup-container" onclick="togglePopup2()" style="display: none; border-radius: 1.125vw; overflow: hidden;">
+		{% include 'popupHt2.html' %}
+	</div>
+	<script src="static/allJS.js" > </script>
+</body>
+</html>

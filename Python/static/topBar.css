@@ -1,0 +1,62 @@
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #283046;
+    color: #fff;
+    padding: .75vw;
+}
+
+.top-bar select {
+	padding: .6vw;
+    font-size: 1.05vw;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: 2vw;
+    /*gap: 15px;  Adjusts spacing between elements */
+}
+
+/*.weather-info span, 
+.weather-info img {
+    margin-right: 10px;
+}*/
+
+.topbar-batchList h1{
+	font-size: 2vw;
+}
+
+.weather-logo, .wind-logo, .rain-logo {
+    width: 2.25vw; /* Adjust the size of the logos */
+    height: 2.25vw;
+	margin-left: 1.5vw;
+	margin-right: .375vw;
+}
+
+.Tx_Bold {
+    font-weight: bold;
+}
+
+
+.hamburger {
+    cursor: pointer;
+    font-size: 2vw;
+}
+
+
+
+select.user-dropdown {
+    padding: .6vw;
+    font-size: 1.05vw;
+    color: #555;            /* Text color */
+    border: .15vw solid #ffe136; /* Default border color */
+    border-radius: .6vw;     /* Rounded corners */
+    outline: none;
+    transition: border-color 0.3s;
+	font-family: 'Montserrat-Bold';
+}
+
+

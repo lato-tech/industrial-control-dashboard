@@ -1,0 +1,245 @@
+
+/* Panel container */
+.panel {
+	background-color: #283046;
+	padding: 1.125vw;
+	border-radius: .75vw;
+	position: relative;
+	color: white;
+	width: 100%;
+	height: 12vw;
+	min-width: 30%;
+}
+
+
+/* Top bar styling */
+.top-bar2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  background-color: #795695;
+  font-family: 'Montserrat-Bold';
+  color: #283046;
+  width: 100%;
+  position: absolute;
+  padding-right:.75vw;
+  padding-left:.75vw;
+  height:3.75vw;
+  top: 0;
+  left: 0;
+  border-top-left-radius: .75vw; /* Same radius as panel */
+  border-top-right-radius: .75vw; /* Same radius as panel */
+}
+.MainHeadingCont{ 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.heading {
+    color: #161d30;
+    margin-right: .075vw;
+    text-align: left;
+	width: 7.5vw; /* Adjust the width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.heading2 {
+    color: #161d30;
+    margin-right: .075vw;
+    text-align: left;
+}
+
+/* Circular Indicator */
+.indicator {
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    background-color: red; /* Default off state */
+    margin-right: .3vw;
+}
+
+.Contectors{
+	width: 2.265vw;
+    height: 2.265vw;
+	
+}
+
+.Test{
+	
+	background-color: white;
+	
+}
+
+/* Fault Alarm Logo */
+.fault-alarm {
+    width: 1.875vw;
+    height: 1.875vw;
+	position: absolute;
+	top:.6vw;
+}
+
+/* Cycle Label  style="margin-right: 20px; margin-left: 20px;" */
+.cycle-label {
+	cursor: pointer;
+	margin-left: 3vw;
+    margin-right: 1.125vw;
+	color: #7CFC00;
+}
+
+
+.connButton{
+	display: flex;
+	background-color:white;
+	border-radius: 1.5vw;
+	border: .15vw solid #ffe136;
+	align-items: center;
+}
+
+
+
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3vw;
+    height: 1.5vw;
+}
+
+
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 1.5vw;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1vw;
+    width: 1vw;
+    left: .3vw;
+    bottom: .225vw;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #283046; /* Active state toggle button */
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.5vw);
+}
+
+/* Main content styling */
+.main-content2 {
+    margin-top: 1.5vw;
+}
+
+.frequency-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.2vw;
+	margin-top: 3.75vw; /* Pushes Frequency section below top bar */
+}
+
+.sv-pv {
+	display: flex;
+	justify-content: space-between;
+	align-items: left;
+	/*margin-left: 20px;  Adds space between Frequency label and SV/PV */
+	margin-right: .375vw;
+	width:15.75vw;
+	white-space: nowrap;
+}
+
+.PVs{
+	width:18.75vw;
+	white-space: nowrap;
+	overflow: hidden;
+	
+}
+
+
+.label {
+    position: relative; /* Make this parent positioned */
+	display: flex;                /* Use flexbox for alignment */
+    align-items: center;
+	width:11.25vw;
+	white-space: nowrap;
+    overflow: hidden;
+	margin-left:.075vw;
+	font-size: 1.2vw;
+}
+
+
+.inLabel {
+    cursor: pointer;             /* Cursor pointer for the toggle */
+}
+
+.input-container {
+	position: relative; /* Makes the container a positioned element */
+	display: inline-block;
+	width:13.5vw;
+	white-space: nowrap;
+	font-size: 1.2vw;
+}
+
+
+
+
+.inText:focus {
+    padding-left:.5vw
+    outline: none; 
+    border: 0.15vw solid white; /* Keep focus border same as base */
+    /* If you want to add a glow or shadow effect on focus, you can do so here */
+    /* box-shadow: 0 0 5px #ffff00; */
+}
+.inText {
+    width: 5vw;
+    height: 2.5vw;
+    text-align: left;
+    box-sizing: border-box;
+	position: absolute;
+	display:none;
+	font-size: 1.2vw;
+	background-color: #283046;
+	top: -.375vw;
+	left: -.5vw;
+	color: white;
+	border-radius: .5vw;
+	outline: none;
+	border: .15vw solid white;
+    z-index: 100; /* Ensures it overlaps other elements */
+}
+
+
+	/*left: 70%;
+	
+input 
+	border-width:0;
+	overflow: hidden;
+	padding-block: 0;
+    padding-inline: 0;
+	height:2vw;
+	width:4vw;
+
+	top: 50%; /* Adjust according to your needs *
+    transform: translateY(-50%);*/

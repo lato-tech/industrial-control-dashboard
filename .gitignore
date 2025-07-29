@@ -2,7 +2,8 @@
 *.db
 *.sqlite
 *.sqlite3
-panel_data.db
+# Allow specific database file
+!Python/panel_data.db
 
 # Python cache
 __pycache__/
@@ -39,6 +40,8 @@ logs/
 *.backup
 *.bak
 *.Back*
+# Allow specific backup file
+!Python/static/allJS.js.Back290125
 
 # Large reference files (optional)
 ref/PLC Coding/

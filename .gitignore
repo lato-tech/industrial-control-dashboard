@@ -2,8 +2,7 @@
 *.db
 *.sqlite
 *.sqlite3
-# Allow specific database file
-!Python/panel_data.db
+panel_data.db
 
 # Python cache
 __pycache__/

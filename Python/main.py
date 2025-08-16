@@ -9,7 +9,7 @@ from datetime import datetime
 
 debugB = False
 if not debugB:
-    import librpiplc as rpiplc
+    from librpiplc import rpiplc
 
 
 from flask import render_template, Response
@@ -119,7 +119,7 @@ def set_friq():
     print(f"Frequency: {friq}, Current Panel: {curPanel}")
     if curPanel>10:
         return '', 204
-    vfdList[curPanel].setFriq(friq)
+    vfdList[curPanel-1].setFriq(friq)
     return '', 204
 
 @app.route('/onVfd', methods=['POST'])

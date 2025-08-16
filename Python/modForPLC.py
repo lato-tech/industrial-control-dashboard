@@ -121,6 +121,7 @@ class ModBusController:
             result = self.client.write_register(address=register_address, value=value, unit=self.slave_id)
             cTime = time.time()
             while result.isError():
+                print("error:")
                 time.sleep(.3)
                 result = self.client.write_register(address=register_address, value=value, unit=self.slave_id)
                 if time.time() - cTime > 5:
@@ -131,14 +132,19 @@ class ModBusController:
         except ModbusException as e:
             raise RuntimeError(f"Modbus error: {e}")
         finally:
+            print("Write Sucess")
             self.close()
 
     def setFriq(self, friq):
-        friq = round(friq, 2)
+        
+        friq = round(int(friq), 2)
         if 10 < friq < 100:
-            friq = int(100 * friq)
+            print("Friq Got:", friq)
+            friq = int(100 * friq)          
         else:
+            print("Error")
             return
+        print("Set Friq Done")
         self.write_register(0x2001, friq)
 
     def getFriq(self):

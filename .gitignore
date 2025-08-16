@@ -47,4 +47,4 @@ ref/PLC Coding/
 
 # Temporary files
 *.tmp
-*.temp 
+*.temp Python/venv2/
